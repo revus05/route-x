@@ -29,17 +29,19 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tektur.variable} ${sairaStencilOne.variable} antialiased flex flex-col gap-16 overflow-x-hidden`}
+        className={`${tektur.variable} ${sairaStencilOne.variable} antialiased flex flex-col gap-16`}
       >
-        <Image
-          src={backgroundTexture.src}
-          width={backgroundTexture.width}
-          height={backgroundTexture.height}
-          className={"absolute top-0 left-0 w-full -z-1 select-none"}
-          alt="backgroundTexture"
-        />
-        <Header />
-        {children}
+        <main className={"overflow-x-hidden"}>
+          <Image
+            src={backgroundTexture.src}
+            width={backgroundTexture.width}
+            height={backgroundTexture.height}
+            className={"absolute top-0 left-0 w-full -z-1 select-none"}
+            alt="backgroundTexture"
+          />
+          <Header />
+          {children}
+        </main>
       </body>
     </html>
   );

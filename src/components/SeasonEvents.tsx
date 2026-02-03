@@ -24,16 +24,16 @@ export const SeasonEvents = async () => {
   const seasonEvents = await fetchSeasonEvents();
 
   return (
-    <section>
+    <section className={"px-2 2xl:px-0"}>
       <div
         className={
-          "w-360 mx-auto bg-black/50 backdrop-blur-lg px-8 py-6 flex-col flex gap-8 rounded-2xl relative overflow-hidden"
+          "2xl:w-360 w-full mx-auto bg-black/50 backdrop-blur-lg md:px-8 md:py-6 px-4 py-3 flex-col flex gap-8 rounded-2xl relative overflow-hidden"
         }
       >
         <h2 className={"font-semibold text-2xl text-center"}>
           Сезонный календарь мероприятий
         </h2>
-        <table>
+        <table className={"w-full min-w-0 table-fixed"}>
           <tbody>
             {seasonEvents.map((seasonEvent, index) => (
               <tr
@@ -44,22 +44,30 @@ export const SeasonEvents = async () => {
                 )}
               >
                 <td
-                  className={"text-xl font-semibold py-1.5 uppercase truncate"}
+                  className={
+                    "lg:text-xl text-base pr-1 font-semibold py-1.5 uppercase truncate md:pr-2"
+                  }
                 >
                   {seasonEvent.date || "—"}
                 </td>
                 <td
-                  className={"text-xl font-semibold py-1.5 uppercase truncate"}
+                  className={
+                    "lg:text-xl text-base px-1 font-semibold py-1.5 uppercase truncate md:px-2"
+                  }
                 >
                   {seasonEvent.format || "—"}
                 </td>
                 <td
-                  className={"text-xl font-semibold py-1.5 uppercase truncate"}
+                  className={
+                    "lg:text-xl text-base px-1 font-semibold py-1.5 uppercase truncate md:px-2"
+                  }
                 >
                   {seasonEvent.configuration || "—"}
                 </td>
                 <td
-                  className={"text-xl font-semibold py-1.5 uppercase truncate"}
+                  className={
+                    "lg:text-xl text-base pl-1 font-semibold py-1.5 uppercase truncate md:pl-2"
+                  }
                 >
                   {seasonEvent.location || "—"}
                 </td>

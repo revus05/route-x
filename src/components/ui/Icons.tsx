@@ -138,4 +138,33 @@ export const Icons: IconComponents = {
       <path d="M19.4141 12L12.707 18.707L11.293 17.293L15.5859 13H6V11H15.5859L11.293 6.70703L12.707 5.29297L19.4141 12Z" />
     </svg>
   ),
+  burgerMenu: (props) => (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>burger menu</title>
+      <path d="M19 17H9V15H19V17ZM19 9H5V7H19V9Z" fill="#B8FF01" />
+    </svg>
+  ),
+  cross: (props) => (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>cross</title>
+      <path
+        d="M21 5.07715L14.0771 12L21 18.9229L18.9229 21L12 14.0771L5.07715 21L3 18.9229L9.92285 12L3 5.07715L5.07715 3L12 9.92285L18.9229 3L21 5.07715Z"
+        fill="white"
+      />
+    </svg>
+  ),
 };

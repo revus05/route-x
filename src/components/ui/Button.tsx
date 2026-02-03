@@ -1,6 +1,6 @@
 "use client";
 
-import { Icons } from "components/Icons";
+import { Icons } from "components/ui/Icons";
 import { cn } from "lib/cn";
 import { useRouter } from "next/navigation";
 import React, { type ComponentProps, createElement, type FC } from "react";

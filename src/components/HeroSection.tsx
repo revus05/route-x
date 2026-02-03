@@ -14,7 +14,7 @@ export const HeroSection = () => {
         <div className={"flex flex-col gap-2"}>
           <h1
             className={
-              "font-(family-name:--font-saira-stencil-one) text-[70px]"
+              "font-(family-name:--font-saira-stencil-one) xl:text-[70px] text-[48px]"
             }
           >
             GYMKHANA

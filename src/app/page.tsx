@@ -1,6 +1,8 @@
 import { Events } from "components/events/Events";
 import { HeroSection } from "components/HeroSection";
+import { Pilots } from "components/Pilots";
 import { SeasonEvents } from "components/SeasonEvents";
+import { TrackDaysAndTrains } from "components/TrackDaysAndTrains";
 
 export default function Home() {
   return (
@@ -8,6 +10,8 @@ export default function Home() {
       <HeroSection />
       <SeasonEvents />
       <Events />
+      <Pilots />
+      <TrackDaysAndTrains />
     </>
   );
 }

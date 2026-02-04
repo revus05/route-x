@@ -53,7 +53,7 @@ export const BurgerMenu = () => {
   return (
     <>
       <button
-        className="justify-self-end p-4 cursor-pointer xl:hidden block"
+        className="justify-self-end p-4 cursor-pointer lg:hidden block"
         onClick={handleOpenBurgerMenu}
         type="button"
       >
@@ -76,7 +76,7 @@ export const BurgerMenu = () => {
             />
             <div
               className={cn(
-                "xl:hidden fixed top-0 right-0 h-screen w-[320px] bg-background z-50 transition-transform",
+                "lg:hidden fixed top-0 right-0 h-screen w-[320px] bg-background z-50 transition-transform",
                 isOpen ? "translate-x-0" : "translate-x-full",
               )}
             >

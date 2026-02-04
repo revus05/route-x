@@ -2,7 +2,7 @@ import { EventsList } from "components/events/EventsList";
 import type { Event } from "types/event";
 
 export const Events = async () => {
-  async function fetchSeasonEvents(): Promise<Event[]> {
+  async function fetchEvents(): Promise<Event[]> {
     const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Мероприятия`);
 
     if (!res.ok) {
@@ -12,10 +12,10 @@ export const Events = async () => {
     return res.json();
   }
 
-  const events = await fetchSeasonEvents();
+  const events = await fetchEvents();
 
   return (
-    <section>
+    <section id="events_section" className="scroll-mt-36">
       <EventsList events={events} />
     </section>
   );

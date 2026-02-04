@@ -6,7 +6,10 @@ import pilots from "../../public/pilots.png";
 
 export const Pilots = () => {
   return (
-    <section className={"min-h-125 flex items-center"}>
+    <section
+      className="min-h-125 flex items-center scroll-mt-36"
+      id="pilots_section"
+    >
       <div className={"lg:w-5xl w-full px-2 mx-auto relative"}>
         <div className={"flex flex-col gap-6"}>
           <div className={"flex flex-col gap-4"}>

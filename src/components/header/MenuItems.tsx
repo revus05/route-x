@@ -1,49 +1,94 @@
-import Link from "next/link";
+"use client";
 
-export const MenuItems = () => {
+import Link from "next/link";
+import type { FC } from "react";
+
+type MenuItemsProps = {
+  onMenuItemClickAction?: () => void;
+};
+
+export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
+  const scrollTo = (id: string) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <ul className={"flex lg:flex-row flex-col"}>
       <li>
         <Link
-          href="#"
+          href="/#events_section"
           className={
             "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold"
           }
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("events_section");
+            if (onMenuItemClickAction) {
+              onMenuItemClickAction();
+            }
+          }}
         >
           Мероприятия
         </Link>
       </li>
       <li>
         <Link
-          href="#"
+          href="/#pilots_section"
           className={
             "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold"
           }
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("pilots_section");
+            if (onMenuItemClickAction) {
+              onMenuItemClickAction();
+            }
+          }}
         >
           Пилоты
         </Link>
       </li>
       <li>
         <Link
-          href="#"
+          href="/#media_section"
           className={
             "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold"
           }
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("media_section");
+            if (onMenuItemClickAction) {
+              onMenuItemClickAction();
+            }
+          }}
         >
           Медиа
         </Link>
       </li>
       <li>
         <Link
-          href="#"
+          href="/#partners_section"
           className={
             "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold"
           }
+          onClick={(e) => {
+            e.preventDefault();
+            scrollTo("partners_section");
+            if (onMenuItemClickAction) {
+              onMenuItemClickAction();
+            }
+          }}
         >
           Партнеры
         </Link>
       </li>
-      <li>
+      {/*<li>
         <Link
           href="#"
           className={
@@ -52,7 +97,7 @@ export const MenuItems = () => {
         >
           Результаты
         </Link>
-      </li>
+      </li>*/}
       <li>
         <Link
           href="#"

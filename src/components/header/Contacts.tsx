@@ -6,7 +6,12 @@ export const Contacts = () => {
     <>
       <div className={"flex items-center gap-2"}>
         <Icons.a1 />
-        <span className={"whitespace-nowrap"}>+375 29 925-39-38</span>
+        <Link
+          href="tel:+375299253938"
+          className="whitespace-nowrap hover:underline"
+        >
+          +375 29 925-39-38
+        </Link>
       </div>
       <div className={"flex gap-4"}>
         <Link href="https://www.instagram.com/route_papa" target="_blank">

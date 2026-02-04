@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Saira_Stencil_One, Tektur } from "next/font/google";
 import "./globals.css";
+import { Footer } from "components/Footer";
 import { Header } from "components/header/Header";
 import Image from "next/image";
 import type { ReactNode } from "react";
@@ -41,6 +42,7 @@ export default function RootLayout({
           />
           <Header />
           {children}
+          <Footer />
         </main>
       </body>
     </html>

@@ -88,7 +88,7 @@ export const BurgerMenu = () => {
                 <Icons.cross />
               </button>
               <nav>
-                <MenuItems />
+                <MenuItems onMenuItemClickAction={handleCloseBurgerMenu} />
               </nav>
               <div className={"p-4 flex flex-col gap-4"}>
                 <Contacts />

@@ -167,4 +167,30 @@ export const Icons: IconComponents = {
       />
     </svg>
   ),
+  chevronRightTop: (props) => (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>chevron right top</title>
+      <path d="M17.6279 17.6855L15.3594 17.6914L15.3789 10.2217L7.14258 18.457L5.54297 16.8574L13.7783 8.62109L6.30859 8.64062L6.31445 6.37207L17.6562 6.34375L17.6279 17.6855Z" />
+    </svg>
+  ),
+  chevronLeft: (props) => (
+    <svg
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      {...props}
+    >
+      <title>chevron left</title>
+      <path d="M14.1211 6.70703L9.82812 11H19.4141V13H9.82812L14.1211 17.293L12.707 18.707L6 12L12.707 5.29297L14.1211 6.70703Z" />
+    </svg>
+  ),
 };

@@ -27,7 +27,7 @@ export const SeasonEvents = async () => {
     <section className={"px-2 2xl:px-0"}>
       <div
         className={
-          "2xl:w-360 w-full mx-auto bg-black/50 backdrop-blur-lg md:px-8 md:py-6 px-4 py-3 flex-col flex gap-8 rounded-2xl relative overflow-hidden"
+          "2xl:w-7xl w-full mx-auto bg-black/50 backdrop-blur-lg md:px-8 md:py-6 px-4 py-3 flex-col flex gap-8 rounded-2xl relative overflow-hidden"
         }
       >
         <h2 className={"font-semibold text-2xl text-center"}>

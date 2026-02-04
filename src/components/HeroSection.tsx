@@ -24,6 +24,7 @@ export const HeroSection = () => {
           </span>
         </div>
         <Button
+          href="https://racelane.by/"
           endIcon={"chevronRight"}
           className={
             "hover:[&_svg]:ml-1.5 hover:bg-accent [&_svg]:transition-[margin] relative before:h-16 before:w-2 " +

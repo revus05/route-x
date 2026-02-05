@@ -18,7 +18,7 @@ export const TrackDaysAndTrains = () => {
             width={poster.width}
             height={poster.height}
             className={
-              "rounded-2xl w-[clamp(250px,100%,400px)] mx-auto justify-self-end"
+              "rounded-2xl w-[clamp(250px,100%,400px)] mx-auto justify-self-end sm:-order-1 order-2"
             }
           />
           <div className={"flex flex-col gap-6 xl:w-90 w-full"}>

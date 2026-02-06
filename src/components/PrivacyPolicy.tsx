@@ -1,6 +1,6 @@
 const PrivacyPolicyPage = () => {
   return (
-    <section className="md:w-170 md:px-0 px-2 w-full mx-auto flex flex-col gap-6">
+    <section className="md:w-170 md:px-0 px-2 w-full mx-auto flex flex-col gap-6 scroll-mt-40">
       <h2 className="font-bold md:text-[40px] sm:text-3xl text-2xl">
         Политика конфиденциальности
       </h2>

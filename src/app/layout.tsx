@@ -30,20 +30,20 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tektur.variable} ${sairaStencilOne.variable} antialiased`}
+        className={`${tektur.variable} ${sairaStencilOne.variable} min-h-screen antialiased flex flex-col gap-16`}
       >
-        <main className={"overflow-hidden flex flex-col gap-16"}>
-          <Image
-            src={backgroundTexture.src}
-            width={backgroundTexture.width}
-            height={backgroundTexture.height}
-            className={"fixed top-0 left-0 w-full -z-1 select-none"}
-            alt="backgroundTexture"
-          />
-          <Header />
+        <Image
+          src={backgroundTexture.src}
+          width={backgroundTexture.width}
+          height={backgroundTexture.height}
+          className={"fixed top-0 left-0 w-full -z-1 select-none"}
+          alt="backgroundTexture"
+        />
+        <Header />
+        <main className={"overflow-hidden grow flex flex-col gap-16"}>
           {children}
-          <Footer />
         </main>
+        <Footer />
       </body>
     </html>
   );

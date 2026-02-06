@@ -17,9 +17,6 @@ export const Contacts = () => {
         <Link href="https://www.instagram.com/route_papa" target="_blank">
           <Icons.instagram className={"size-7"} />
         </Link>
-        <Link href="https://www.whatsapp.com/" target="_blank">
-          <Icons.whatsapp className={"size-7"} />
-        </Link>
         <Link href="https://t.me/fgbffhgddf" target="_blank">
           <Icons.telegram className={"size-7"} />
         </Link>

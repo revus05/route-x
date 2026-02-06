@@ -7,10 +7,10 @@ export const HeroSection = () => {
   return (
     <div
       className={
-        "2xl:w-360 w-full 2xl:px-0 px-2 mx-auto xl:min-h-145 lg:min-h-120 md:min-h-110 sm:min-h-100 min-h-80 xl:flex xl:items-center xl:py-0 py-20 relative"
+        "2xl:w-360 w-full 2xl:px-0 px-2 mx-auto xl:min-h-145 lg:min-h-120 md:min-h-110 sm:min-h-100 min-h-80 xl:flex xl:items-center xl:py-0 sm:py-20 pb-20 pt-4 relative"
       }
     >
-      <div className={"flex flex-col gap-6 md:w-161.25 w-64"}>
+      <div className={"flex flex-col gap-6 md:w-161.25 w-full"}>
         <div className={"flex flex-col gap-2"}>
           <h1
             className={
@@ -51,7 +51,7 @@ export const HeroSection = () => {
         height={heroCar.height}
         width={heroCar.width}
         className={
-          "absolute lg:-right-87.5 sm:-right-70 -right-48 top-1/2 -translate-y-1/2 select-none -z-1"
+          "absolute lg:-right-87.5 sm:-right-70 -right-48 top-1/2 sm:-translate-y-1/2 -translate-y-1/3 select-none -z-1"
         }
       />
     </div>

@@ -18,7 +18,7 @@ const sairaStencilOne = Saira_Stencil_One({
 });
 
 export const metadata: Metadata = {
-  title: "Route X - Автоклуб",
+  title: "Gymkhana Race - Автоклуб",
   description: "Автоклуб, специализирующийся на стиле gymkhana",
 };
 

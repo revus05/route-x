@@ -20,7 +20,7 @@ export const Contacts = () => {
         <Link href="https://www.whatsapp.com/" target="_blank">
           <Icons.whatsapp className={"size-7"} />
         </Link>
-        <Link href="https://t.me/route_papa" target="_blank">
+        <Link href="https://t.me/fgbffhgddf" target="_blank">
           <Icons.telegram className={"size-7"} />
         </Link>
         <Link href="https://msng.link/o?375259253938=vi" target="_blank">

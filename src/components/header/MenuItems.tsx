@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { usePathname, useRouter } from "next/navigation";
 import type { FC } from "react";
 
 type MenuItemsProps = {
@@ -8,14 +9,27 @@ type MenuItemsProps = {
 };
 
 export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
-  const scrollTo = (id: string) => {
-    const el = document.getElementById(id);
-    if (!el) return;
+  const pathname = usePathname();
+  const router = useRouter();
 
-    el.scrollIntoView({
-      behavior: "smooth",
-      block: "start",
-    });
+  const scrollTo = (id: string) => {
+    if (pathname === "/") {
+      const el = document.getElementById(id);
+      if (!el) return;
+
+      el.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+
+      window.history.pushState(null, "", `/#${id}`);
+    } else {
+      router.push(`/#${id}`);
+    }
+
+    if (onMenuItemClickAction) {
+      onMenuItemClickAction();
+    }
   };
 
   return (
@@ -24,7 +38,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#events_section"
           className={
-            "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -41,7 +55,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#pilots_section"
           className={
-            "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -58,7 +72,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#media_section"
           className={
-            "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -75,7 +89,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#partners_section"
           className={
-            "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -92,7 +106,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="#"
           className={
-            "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
         >
           Результаты
@@ -102,10 +116,10 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="#"
           className={
-            "flex 2xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
         >
-          Документы
+          Документация
         </Link>
       </li>
     </ul>

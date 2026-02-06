@@ -26,8 +26,8 @@ export const Footer = () => {
             </Link>
           </span>
           <span className="text-white/70">
-            ©2026 Все права защищены{" "}
-            <span className="text-white">https://gymkhanarace.by</span>.
+            ©2026 <span className="text-white">gymkhanarace.by</span>. Все права
+            защищены
           </span>
         </div>
         <Link

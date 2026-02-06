@@ -29,7 +29,7 @@ export const Partners = async () => {
               href={partner.link || "#"}
               key={partner.id}
               className={
-                "bg-black/50 backdrop-blur-lg rounded-2xl p-8 flex justify-center"
+                "bg-black/50 backdrop-blur-lg rounded-2xl p-6 flex justify-center h-36"
               }
             >
               <Image
@@ -37,7 +37,7 @@ export const Partners = async () => {
                 alt="partner"
                 width={300}
                 height={100}
-                className={"h-24 w-fit"}
+                className={"object-contain"}
               />
             </Link>
           ))}

@@ -1,5 +1,6 @@
 import { Button } from "components/ui/Button";
 import Image from "next/image";
+import crown from "../../public/crown.svg";
 import heroCar from "../../public/hero-car.png";
 import heroGraffiti from "../../public/hero-graffiti.png";
 
@@ -11,14 +12,21 @@ export const HeroSection = () => {
       }
     >
       <div className={"flex flex-col gap-6 md:w-161.25 w-full"}>
-        <div className={"flex flex-col gap-2"}>
-          <h1
-            className={
-              "font-(family-name:--font-saira-stencil-one) xl:text-[70px] text-[48px]"
-            }
-          >
-            GYMKHANA
-          </h1>
+        <div className={"flex flex-col gap-2 2xl:px-0 px-5"}>
+          <div className={"w-fit h-fit relative"}>
+            <Image
+              src={crown}
+              alt={"crown"}
+              className="absolute -rotate-30 xl:size-16 size-12 xl:-top-5 xl:-left-7 opacity-50 -top-3 -left-5"
+            />
+            <h1
+              className={
+                "font-(family-name:--font-saira-stencil-one) xl:text-[70px] text-[48px]"
+              }
+            >
+              GYMKHANA
+            </h1>
+          </div>
           <span className={"text-shadow-black text-shadow-md"}>
             Автоспортивные соревнования, где решают точность, реакция и контроль
           </span>

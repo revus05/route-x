@@ -3,7 +3,9 @@ import type { Event } from "types/event";
 
 export const Events = async () => {
   async function fetchEvents(): Promise<Event[]> {
-    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Мероприятия`);
+    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Мероприятия`, {
+      next: { revalidate: 30 }, // 30 sec
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch events");

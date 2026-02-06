@@ -4,7 +4,9 @@ import type { Media } from "types/media";
 
 export const MediaSection = async () => {
   async function fetchMedia(): Promise<Media[]> {
-    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Медиа`);
+    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Медиа`, {
+      next: { revalidate: 30 }, // 30 sec
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch season events");

@@ -1,9 +1,12 @@
 import Image from "next/image";
+import Link from "next/link";
 import type { Partner } from "types/partners";
 
 export const Partners = async () => {
   async function fetchPartners(): Promise<Partner[]> {
-    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Партнеры`);
+    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Партнеры`, {
+      next: { revalidate: 30 }, // 30 sec
+    });
 
     if (!res.ok) {
       throw new Error("Failed to fetch season events");
@@ -14,6 +17,8 @@ export const Partners = async () => {
 
   const partners = await fetchPartners();
 
+  console.log(partners);
+
   return (
     <section id="partners_section" className="scroll-mt-36">
       <div
@@ -22,7 +27,8 @@ export const Partners = async () => {
         <h2 className="font-bold text-[40px] text-2xl">Партнеры</h2>
         <div className={"grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 gap-6"}>
           {partners.map((partner) => (
-            <div
+            <Link
+              href={partner.link || "#"}
               key={partner.id}
               className={
                 "bg-black/50 backdrop-blur-lg rounded-2xl p-8 flex flex-col items-center gap-8"
@@ -33,10 +39,10 @@ export const Partners = async () => {
                 alt={partner.title}
                 width={300}
                 height={100}
-                className={"w-full"}
+                className={"h-24 w-fit"}
               />
               {partner.title}
-            </div>
+            </Link>
           ))}
         </div>
       </div>

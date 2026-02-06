@@ -12,6 +12,9 @@ export const SeasonEvents = async () => {
   async function fetchSeasonEvents(): Promise<SeasonEvent[]> {
     const res = await fetch(
       `${process.env.GOOGLE_SHEET_URL}Календарь+мероприятий`,
+      {
+        next: { revalidate: 30 }, // 30 sec
+      },
     );
 
     if (!res.ok) {

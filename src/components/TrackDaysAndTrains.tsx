@@ -3,7 +3,25 @@ import { Icons } from "components/ui/Icons";
 import Image from "next/image";
 import poster from "../../public/poster.jpg";
 
-export const TrackDaysAndTrains = () => {
+type TrackDaysBannerUrl = {
+  url: string;
+};
+
+export const TrackDaysAndTrains = async () => {
+  async function fetchTrackDaysUrl(): Promise<TrackDaysBannerUrl[]> {
+    const res = await fetch(`${process.env.GOOGLE_SHEET_URL}Баннер+трек-дни`, {
+      next: { revalidate: 30 }, // 30 sec
+    });
+
+    if (!res.ok) {
+      throw new Error("Failed to fetch events");
+    }
+
+    return res.json();
+  }
+
+  const trackDaysPosterUrl = await fetchTrackDaysUrl();
+
   return (
     <section>
       <div
@@ -13,7 +31,7 @@ export const TrackDaysAndTrains = () => {
       >
         <div className={"grid sm:grid-cols-2 grid-cols-1 gap-6"}>
           <Image
-            src={poster}
+            src={trackDaysPosterUrl[0].url}
             alt="poster"
             width={poster.width}
             height={poster.height}

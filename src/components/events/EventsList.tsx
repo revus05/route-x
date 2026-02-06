@@ -121,7 +121,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
               />
               <div
                 className={
-                  "bg-black/70 backdrop-blur-lg w-full flex flex-col gap-4 rounded-2xl lg:px-8 px-4 lg:py-5 py-3 absolute scale-75 bottom-0 translate-y-full group-hover:translate-y-0 transition-transform group-hover:scale-100"
+                  "bg-black/70 backdrop-blur-lg w-full flex flex-col gap-4 rounded-2xl lg:px-8 px-4 lg:py-5 py-3 lg:absolute lg:scale-75 lg:bottom-0 lg:translate-y-full group-hover:translate-y-0 transition-transform group-hover:scale-100"
                 }
               >
                 <div className={"flex flex-col gap-2"}>

@@ -31,7 +31,7 @@ export const Footer = () => {
           </span>
         </div>
         <Link
-          href="/"
+          href="/#top"
           className="justify-self-center md:order-0 -order-1 flex justify-center h-fit"
         >
           <Image

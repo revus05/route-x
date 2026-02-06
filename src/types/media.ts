@@ -3,4 +3,5 @@ export type Media = {
   image: string;
   title: string;
   car: string;
+  link: string;
 };

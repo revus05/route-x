@@ -17,8 +17,6 @@ export const Partners = async () => {
 
   const partners = await fetchPartners();
 
-  console.log(partners);
-
   return (
     <section id="partners_section" className="scroll-mt-36">
       <div
@@ -31,17 +29,16 @@ export const Partners = async () => {
               href={partner.link || "#"}
               key={partner.id}
               className={
-                "bg-black/50 backdrop-blur-lg rounded-2xl p-8 flex flex-col items-center gap-8"
+                "bg-black/50 backdrop-blur-lg rounded-2xl p-8 flex justify-center"
               }
             >
               <Image
                 src={partner.image}
-                alt={partner.title}
+                alt="partner"
                 width={300}
                 height={100}
                 className={"h-24 w-fit"}
               />
-              {partner.title}
             </Link>
           ))}
         </div>

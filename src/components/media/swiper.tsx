@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/free-mode";
 
 import Image from "next/image";
+import Link from "next/link";
 import type { FC } from "react";
 import type { Swiper as SwiperType } from "swiper";
 import type { Media } from "types/media";
@@ -53,7 +54,11 @@ export const MediaSwiper: FC<MediaSwiperProps> = ({ media }) => {
       >
         {media.map((mediaItem) => (
           <SwiperSlide key={mediaItem.id}>
-            <div className="relative w-full aspect-353/404 rounded-2xl overflow-hidden">
+            <Link
+              href={mediaItem.link || "#"}
+              target="_blank"
+              className="block relative w-full aspect-353/404 rounded-2xl overflow-hidden"
+            >
               <Image
                 src={mediaItem.image}
                 alt="media image"
@@ -71,7 +76,7 @@ export const MediaSwiper: FC<MediaSwiperProps> = ({ media }) => {
                   </span>
                 </div>
               </div>
-            </div>
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>

@@ -38,7 +38,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#events_section"
           className={
-            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -55,7 +55,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#pilots_section"
           className={
-            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -72,7 +72,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#media_section"
           className={
-            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -89,7 +89,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/#partners_section"
           className={
-            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
           onClick={(e) => {
             e.preventDefault();
@@ -106,7 +106,7 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="#"
           className={
-            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
         >
           Результаты
@@ -116,8 +116,13 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
         <Link
           href="/documents"
           className={
-            "flex xl:px-6 px-2 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
+            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
+          onClick={() => {
+            if (onMenuItemClickAction) {
+              onMenuItemClickAction();
+            }
+          }}
         >
           Документация
         </Link>

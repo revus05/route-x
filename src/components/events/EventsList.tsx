@@ -7,6 +7,9 @@ import { cn } from "lib/cn";
 import Image from "next/image";
 import { type FC, useState } from "react";
 import type { Event } from "types/event";
+import decorativeGraffiti1 from "../../../public/decorative-graffiti-1.svg";
+import eventsHeadline from "../../../public/events-headline.svg";
+import eventsStar from "../../../public/events-star.svg";
 
 type EventsListProps = {
   events: Event[];
@@ -47,9 +50,24 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
     >
       <div
         className={
-          "lg:flex grid sm:grid-cols-2 grid-cols-1 lg:justify-between gap-4 lg:items-center"
+          "lg:flex grid sm:grid-cols-2 grid-cols-1 lg:justify-between gap-4 lg:items-center relative"
         }
       >
+        <Image
+          src={decorativeGraffiti1}
+          alt={"decorative"}
+          className="absolute -left-64 -top-40 -z-1 select-none"
+        />
+        <Image
+          src={eventsHeadline}
+          alt={"decorative"}
+          className="absolute -left-24 -top-8 -z-1 select-none"
+        />
+        <Image
+          src={eventsStar}
+          alt={"decorative"}
+          className="absolute -right-40 -top-24 -z-1 select-none"
+        />
         <h2 className={"md:text-[48px] text-3xl font-semibold"}>Мероприятия</h2>
         <Tabs
           setTab={handleSetTab}

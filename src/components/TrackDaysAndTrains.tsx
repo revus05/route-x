@@ -2,6 +2,10 @@ import { Button } from "components/ui/Button";
 import { Icons } from "components/ui/Icons";
 import Image from "next/image";
 import poster from "../../public/poster.jpg";
+import trainsBackground from "../../public/trains-background.png";
+import trainsBackgroundGraffiti from "../../public/trains-background-graffiti.svg";
+import trainsGraffiti from "../../public/trains-graffiti.svg";
+import trainsRacetrack from "../../public/trains-racetrack.svg";
 
 type TrackDaysBannerUrl = {
   url: string;
@@ -26,9 +30,24 @@ export const TrackDaysAndTrains = async () => {
     <section>
       <div
         className={
-          "xl:w-fit w-full xl:px-0 px-2 mx-auto flex xl:gap-12 gap-6 lg:flex-row flex-col"
+          "xl:w-fit w-full xl:px-0 px-2 mx-auto flex xl:gap-12 gap-6 lg:flex-row flex-col relative"
         }
       >
+        <Image
+          src={trainsBackground}
+          alt="background"
+          className="absolute top-88 left-10 -z-10 select-none"
+        />
+        <Image
+          src={trainsGraffiti}
+          alt="background"
+          className="absolute bottom-12 -right-60 -z-10 select-none"
+        />
+        <Image
+          src={trainsBackgroundGraffiti}
+          alt="background"
+          className="absolute bottom-12 -left-48 -z-10 select-none"
+        />
         <div className={"grid sm:grid-cols-2 grid-cols-1 gap-6"}>
           <Image
             src={trackDaysPosterUrl[0].url}
@@ -64,7 +83,12 @@ export const TrackDaysAndTrains = async () => {
           </div>
         </div>
         <div className={"w-px bg-white/70"} />
-        <div className={"flex flex-col gap-6"}>
+        <div className={"flex flex-col gap-6 relative"}>
+          <Image
+            src={trainsRacetrack}
+            alt="background"
+            className="absolute -top-20 -right-40 -z-10 select-none"
+          />
           <div className={"border-b-3 border-accent w-fit px-4 py-3"}>
             <h2
               className={

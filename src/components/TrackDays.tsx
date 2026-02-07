@@ -55,11 +55,13 @@ export const TrackDays = async () => {
             width={poster.width}
             height={poster.height}
             className={
-              "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover"
+              "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover md:order-1 order-2"
             }
           />
           <div
-            className={"flex flex-col gap-6 w-full col-span-2 md:col-span-1"}
+            className={
+              "flex flex-col gap-6 w-full col-span-2 md:col-span-1 md:order-2"
+            }
           >
             <div className={"border-b-3 border-accent w-fit px-4 py-3 "}>
               <h2
@@ -71,10 +73,12 @@ export const TrackDays = async () => {
               </h2>
             </div>
             <div className={"flex flex-col gap-4"}>
-              <span className={"whitespace-pre-line"}>
+              <span className={"whitespace-pre-line md:block hidden"}>
                 {trackDaysInfo[0].text}
               </span>
-              <RegisterButton />
+              <div className={"md:block hidden"}>
+                <RegisterButton />
+              </div>
             </div>
           </div>
           <Image
@@ -83,9 +87,15 @@ export const TrackDays = async () => {
             width={poster.width}
             height={poster.height}
             className={
-              "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover md:order-2 -order-1"
+              "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover md:order-3 order-2"
             }
           />
+          <div className={"md:hidden order-4 flex flex-col gap-4"}>
+            <span className={"whitespace-pre-line md:hidden block"}>
+              {trackDaysInfo[0].text}
+            </span>
+            <RegisterButton />
+          </div>
         </div>
       </div>
     </section>

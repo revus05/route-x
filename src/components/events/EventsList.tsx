@@ -117,7 +117,9 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 alt="poster"
                 width={405}
                 height={514}
-                className={"w-full rounded-2xl"}
+                className={
+                  "w-full lg:h-128.5 md:h-110 sm:h-96 rounded-2xl object-cover"
+                }
               />
               <div
                 className={
@@ -126,13 +128,19 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
               >
                 <div className={"flex flex-col gap-2"}>
                   <span className={"text-lg line-clamp-2"}>{event.title}</span>
-                  <span className={"text-sm line-clamp-3"}>{event.title}</span>
+                  <span className={"text-sm line-clamp-3"}>
+                    {event.description}
+                  </span>
                   <span>
                     <span className={"text-white/70"}>Дата проведения:</span>{" "}
                     {event.date}
                   </span>
                 </div>
-                <Button variant={"hover"} className={"w-full"}>
+                <Button
+                  variant={"hover"}
+                  className={"w-full"}
+                  href={`/events/${event.id}`}
+                >
                   Подробнее
                 </Button>
               </div>

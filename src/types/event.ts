@@ -4,4 +4,5 @@ export type Event = {
   title: string;
   date: string;
   status: "active" | "completed";
+  description: string;
 };

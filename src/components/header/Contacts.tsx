@@ -7,10 +7,10 @@ export const Contacts = () => {
       <div className={"flex items-center gap-2"}>
         <Icons.a1 />
         <Link
-          href="tel:+375299253938"
+          href="tel:+375259253938"
           className="whitespace-nowrap hover:underline"
         >
-          +375 29 925-39-38
+          +375 25 925 3938
         </Link>
       </div>
       <div className={"flex gap-4"}>
@@ -19,9 +19,6 @@ export const Contacts = () => {
         </Link>
         <Link href="https://t.me/fgbffhgddf" target="_blank">
           <Icons.telegram className={"size-7"} />
-        </Link>
-        <Link href="https://msng.link/o?375259253938=vi" target="_blank">
-          <Icons.viber className={"size-7"} />
         </Link>
       </div>
     </>

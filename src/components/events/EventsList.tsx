@@ -50,7 +50,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
     >
       <div
         className={
-          "lg:flex grid sm:grid-cols-2 grid-cols-1 lg:justify-between gap-4 lg:items-center relative"
+          "grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 relative"
         }
       >
         <Image
@@ -77,18 +77,9 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
             { value: "completed", label: "Завершенные" },
           ]}
           className={
-            "lg:order-0 order-3 sm:col-span-2 md:col-span-1 sm:justify-self-start justify-self-center"
+            "justify-self-center sm:justify-self-end lg:justify-self-center h-fit self-center"
           }
         />
-        <Button
-          variant={"ghost"}
-          endIcon="chevronRightTop"
-          className={
-            "sm:justify-self-end justify-self-center h-fit sm:w-fit w-full self-center"
-          }
-        >
-          Смотреть все
-        </Button>
       </div>
       <div className={"flex md:gap-6 gap-3 items-center"}>
         <Button
@@ -128,9 +119,6 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
               >
                 <div className={"flex flex-col gap-2"}>
                   <span className={"text-lg line-clamp-1"}>{event.title}</span>
-                  <span className={"text-sm line-clamp-3"}>
-                    {event.description}
-                  </span>
                   <span>
                     <span className={"text-white/70"}>Дата проведения:</span>{" "}
                     {event.date}
@@ -139,7 +127,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 <Button
                   variant={"hover"}
                   className={"w-full"}
-                  href={`/events/${event.id}`}
+                  href={`/events/${event.id}#top`}
                 >
                   Подробнее
                 </Button>

@@ -49,7 +49,7 @@ export const Pilots = () => {
               на список всех пилотов
             </span>
           </div>
-          <Button>Пилоты</Button>
+          <Button href="/pilots">Пилоты</Button>
           <Image
             src={pilotsUnderline}
             alt="decorative graffiti"

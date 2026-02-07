@@ -17,7 +17,7 @@ export const HeroSection = () => {
             <Image
               src={crown}
               alt={"crown"}
-              className="absolute -rotate-30 xl:size-16 size-12 xl:-top-5 xl:-left-7 opacity-50 -top-3 -left-5 select-none -z-10"
+              className="absolute -rotate-30 xl:size-16 size-12 xl:-top-5 xl:-left-7 opacity-50 -top-3 -left-5 select-none z-10"
             />
             <h1
               className={

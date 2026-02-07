@@ -4,7 +4,8 @@ import { MediaSection } from "components/media/Media";
 import { Partners } from "components/Partners";
 import { Pilots } from "components/Pilots";
 import { SeasonEvents } from "components/SeasonEvents";
-import { TrackDaysAndTrains } from "components/TrackDaysAndTrains";
+import { TrackDays } from "components/TrackDays";
+import { Trains } from "components/Trains";
 
 export default function Home() {
   return (
@@ -13,7 +14,8 @@ export default function Home() {
       <SeasonEvents />
       <Events />
       <Pilots />
-      <TrackDaysAndTrains />
+      <TrackDays />
+      <Trains />
       <MediaSection />
       <Partners />
     </>

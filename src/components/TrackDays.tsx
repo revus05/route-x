@@ -30,7 +30,7 @@ export const TrackDays = async () => {
     <section>
       <div
         className={
-          "xl:w-fit w-full xl:px-0 px-2 mx-auto flex xl:gap-12 gap-6 lg:flex-row flex-col relative"
+          "lg:w-214.5 w-full xl:px-0 px-2 mx-auto flex xl:gap-12 gap-6 lg:flex-row flex-col relative"
         }
       >
         <Image
@@ -48,35 +48,20 @@ export const TrackDays = async () => {
           alt="background"
           className="absolute bottom-12 -left-48 -z-10 select-none"
         />
-        <div className={"grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-6"}>
-          <div
-            className={
-              "border-b-3 border-accent w-fit px-4 sm:hidden block py-3"
-            }
-          >
-            <h2
-              className={
-                "sm:text-[48px] text-[36px] font-semibold leading-7.5 whitespace-nowrap"
-              }
-            >
-              Трек-дни
-            </h2>
-          </div>
+        <div className={"grid md:grid-cols-3 grid-cols-2 md:gap-6 gap-4"}>
           <Image
             src={trackDaysInfo[0].leftPoster}
             alt="poster"
             width={poster.width}
             height={poster.height}
             className={
-              "rounded-2xl w-[clamp(250px,100%,400px)] mx-auto justify-self-end"
+              "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover"
             }
           />
-          <div className={"flex flex-col gap-6 xl:w-90 w-full"}>
-            <div
-              className={
-                "border-b-3 border-accent w-fit px-4 py-3 sm:block hidden"
-              }
-            >
+          <div
+            className={"flex flex-col gap-6 w-full col-span-2 md:col-span-1"}
+          >
+            <div className={"border-b-3 border-accent w-fit px-4 py-3 "}>
               <h2
                 className={
                   "sm:text-[48px] text-[36px] font-semibold leading-7.5 whitespace-nowrap"
@@ -98,7 +83,7 @@ export const TrackDays = async () => {
             width={poster.width}
             height={poster.height}
             className={
-              "rounded-2xl w-[clamp(250px,100%,400px)] hidden lg:block mx-auto justify-self-end"
+              "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover md:order-2 -order-1"
             }
           />
         </div>

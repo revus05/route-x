@@ -27,7 +27,7 @@ export const EventPage: FC<EventPageProps> = ({ event }) => {
             Дата проведения: <span className={"text-white"}>{event.date}</span>
           </span>
           <span className={"whitespace-pre-line"}>{event.description}</span>
-          <RegisterButton />
+          {event.status === "active" && <RegisterButton />}
         </div>
       </div>
     </section>

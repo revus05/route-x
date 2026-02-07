@@ -10,7 +10,7 @@ export const Contacts = () => {
           href="tel:+375259253938"
           className="whitespace-nowrap hover:underline"
         >
-          +375 25 925 3938
+          +375 25 925-39-38
         </Link>
       </div>
       <div className={"flex gap-4"}>

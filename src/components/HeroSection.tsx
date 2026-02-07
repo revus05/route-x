@@ -1,4 +1,4 @@
-import { Button } from "components/ui/Button";
+import { RegisterButton } from "components/RegisterButton";
 import Image from "next/image";
 import crown from "../../public/crown.svg";
 import heroCar from "../../public/hero-car.png";
@@ -17,7 +17,7 @@ export const HeroSection = () => {
             <Image
               src={crown}
               alt={"crown"}
-              className="absolute -rotate-30 xl:size-16 size-12 xl:-top-5 xl:-left-7 opacity-50 -top-3 -left-5"
+              className="absolute -rotate-30 xl:size-16 size-12 xl:-top-5 xl:-left-7 opacity-50 -top-3 -left-5 select-none -z-10"
             />
             <h1
               className={
@@ -31,17 +31,7 @@ export const HeroSection = () => {
             Автоспортивные соревнования, где решают точность, реакция и контроль
           </span>
         </div>
-        <Button
-          href="https://racelane.by/"
-          endIcon={"chevronRight"}
-          className={
-            "hover:[&_svg]:ml-1.5 hover:bg-accent [&_svg]:transition-[margin] relative before:h-16 before:w-2 " +
-            "before:bg-gray-400/70 before:rotate-30 before:absolute before:z-2 before:-left-4 " +
-            "hover:before:translate-x-60 before:transition-transform hover:scale-[1.03] overflow-hidden"
-          }
-        >
-          Регистрация
-        </Button>
+        <RegisterButton />
       </div>
       <Image
         aria-hidden

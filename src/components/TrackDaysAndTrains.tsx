@@ -1,4 +1,4 @@
-import { Button } from "components/ui/Button";
+import { RegisterButton } from "components/RegisterButton";
 import { Icons } from "components/ui/Icons";
 import Image from "next/image";
 import poster from "../../public/poster.jpg";
@@ -78,7 +78,7 @@ export const TrackDaysAndTrains = async () => {
                 <br /> Актуальная информация о датах, месте проведения и формате
                 заездов размещается в постерах мероприятий.
               </span>
-              <Button>Регистрация</Button>
+              <RegisterButton />
             </div>
           </div>
         </div>
@@ -124,8 +124,7 @@ export const TrackDaysAndTrains = async () => {
               <span>Безопасная и организованная тренировочная среда</span>
             </li>
           </ul>
-
-          <Button>Регистрация</Button>
+          <RegisterButton />
         </div>
       </div>
     </section>

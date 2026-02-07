@@ -1,4 +1,4 @@
-import { Button } from "components/ui/Button";
+import { RegisterButton } from "components/RegisterButton";
 import Image from "next/image";
 import type { FC } from "react";
 import type { Event } from "types/event";
@@ -27,7 +27,7 @@ export const EventPage: FC<EventPageProps> = ({ event }) => {
             Дата проведения: <span className={"text-white"}>{event.date}</span>
           </span>
           <span>{event.description}</span>
-          <Button>Регистрация</Button>
+          <RegisterButton />
         </div>
       </div>
     </section>

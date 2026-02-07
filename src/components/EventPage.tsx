@@ -9,7 +9,7 @@ type EventPageProps = {
 
 export const EventPage: FC<EventPageProps> = ({ event }) => {
   return (
-    <section className="2xl:w-240 2xl:px-0 px-2 w-full mx-auto">
+    <section className="lg:w-240 lg:px-0 px-2 w-full mx-auto">
       <div className={"grid md:grid-cols-2 grid-cols-1 gap-6"}>
         <h1 className={"md:hidden block font-bold text-2xl truncate"}>
           {event.title}

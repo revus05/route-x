@@ -118,7 +118,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 width={405}
                 height={514}
                 className={
-                  "w-full lg:h-128.5 md:h-110 sm:h-96 rounded-2xl object-cover"
+                  "w-full lg:h-128.5 md:h-110 sm:h-96 h-64 rounded-2xl object-cover"
                 }
               />
               <div
@@ -127,7 +127,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 }
               >
                 <div className={"flex flex-col gap-2"}>
-                  <span className={"text-lg line-clamp-2"}>{event.title}</span>
+                  <span className={"text-lg line-clamp-1"}>{event.title}</span>
                   <span className={"text-sm line-clamp-3"}>
                     {event.description}
                   </span>

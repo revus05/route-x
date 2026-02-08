@@ -90,7 +90,11 @@ export const TrackDays = async () => {
               "rounded-2xl w-[clamp(250px,100%,400px)] h-full mx-auto justify-self-end object-cover md:order-3 order-2"
             }
           />
-          <div className={"md:hidden order-4 flex flex-col gap-4"}>
+          <div
+            className={
+              "md:hidden order-4 flex flex-col col-span-2 md:col-span-1 gap-4"
+            }
+          >
             <span className={"whitespace-pre-line md:hidden block"}>
               {trackDaysInfo[0].text}
             </span>

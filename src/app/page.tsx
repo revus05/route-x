@@ -14,8 +14,8 @@ export default function Home() {
       <SeasonEvents />
       <Events />
       <Pilots />
-      <TrackDays />
       <Trains />
+      <TrackDays />
       <MediaSection />
       <Partners />
     </>

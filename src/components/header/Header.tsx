@@ -33,7 +33,7 @@ export const Header = () => {
         <nav className={"lg:block hidden justify-self-center"}>
           <MenuItems />
         </nav>
-        <div className={"lg:flex hidden justify-self-end flex-col gap-3 py-4"}>
+        <div className={"lg:flex hidden justify-self-end flex-col gap-0.5"}>
           <Contacts />
         </div>
         <BurgerMenu />

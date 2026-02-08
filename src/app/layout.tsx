@@ -32,7 +32,11 @@ export default function RootLayout({
       <body
         className={`${tektur.variable} ${sairaStencilOne.variable} antialiased`}
       >
-        <main className={"flex overflow-hidden flex-col gap-16 min-h-screen"}>
+        <main
+          className={
+            "flex overflow-hidden flex-col xl:gap-16 gap-12 min-h-screen"
+          }
+        >
           <Image
             src={backgroundTexture.src}
             width={backgroundTexture.width}
@@ -41,7 +45,9 @@ export default function RootLayout({
             alt="backgroundTexture"
           />
           <Header />
-          <div className={"grow flex flex-col gap-16"}>{children}</div>
+          <div className={"grow flex flex-col xl:gap-16 gap-12"}>
+            {children}
+          </div>
           <Footer />
         </main>
       </body>

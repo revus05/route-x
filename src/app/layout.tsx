@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Saira_Stencil_One, Tektur } from "next/font/google";
+import { Roboto_Flex, Saira_Stencil_One, Tektur } from "next/font/google";
 import "./globals.css";
 import { Footer } from "components/Footer";
 import { Header } from "components/header/Header";
@@ -11,6 +11,12 @@ const tektur = Tektur({
   variable: "--font-tektur",
   subsets: ["latin", "cyrillic"],
 });
+
+const roboto = Roboto_Flex({
+  variable: "--font-roboto",
+  subsets: ["latin", "cyrillic"],
+});
+
 const sairaStencilOne = Saira_Stencil_One({
   variable: "--font-saira-stencil-one",
   subsets: ["latin"],
@@ -30,7 +36,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${tektur.variable} ${sairaStencilOne.variable} antialiased`}
+        className={`${tektur.variable} ${sairaStencilOne.variable} ${roboto.variable} antialiased`}
       >
         <main
           className={

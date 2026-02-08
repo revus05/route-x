@@ -15,7 +15,7 @@ export const Contacts = () => {
           href="tel:+375259253938"
           className="whitespace-nowrap hover:underline"
         >
-          +375 29 123-12-12
+          +375 25 925-39-38
         </Link>
         <span>Артур</span>
       </div>

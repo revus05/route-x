@@ -42,7 +42,11 @@ export const Footer = () => {
             className="max-w-[320px]"
           />
         </Link>
-        <div className={"flex flex-col gap-4 md:justify-self-end"}>
+        <div
+          className={
+            "flex flex-col gap-4 md:justify-self-end [&_img]:size-8 text-lg"
+          }
+        >
           <Contacts />
         </div>
       </div>

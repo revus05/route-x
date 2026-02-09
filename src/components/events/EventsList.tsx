@@ -127,7 +127,10 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 <Button
                   variant={"hover"}
                   className={"w-full"}
-                  href={`/events/${event.id}#top`}
+                  href={`/events/${event.id}`}
+                  onClick={() =>
+                    window.scrollTo({ top: 0, behavior: "smooth" })
+                  }
                 >
                   Подробнее
                 </Button>

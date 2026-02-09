@@ -1,3 +1,5 @@
+"use client";
+
 import { Contacts } from "components/header/Contacts";
 import Image from "next/image";
 import Link from "next/link";
@@ -31,8 +33,9 @@ export const Footer = () => {
           </span>
         </div>
         <Link
-          href="/#top"
+          href="#"
           className="justify-self-center md:order-0 -order-1 flex justify-center h-fit"
+          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
         >
           <Image
             src={logo.src}

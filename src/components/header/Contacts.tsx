@@ -24,7 +24,7 @@ export const Contacts = () => {
       >
         <Image src={instagramLogo} alt={"Instagram logo"} />
         <Link
-          href="https://www.instagram.com/gymkhana_route_x_race"
+          href="https://www.instagram.com/gymkhana_route_race"
           target="_blank"
           className="whitespace-nowrap hover:underline"
         >

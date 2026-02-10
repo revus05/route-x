@@ -5,7 +5,7 @@ import { Contacts } from "components/header/Contacts";
 import { MenuItems } from "components/header/MenuItems";
 import Image from "next/image";
 import Link from "next/link";
-import logo from "../../../public/logo.png";
+import logo from "../../../public/logo.svg";
 
 export const Header = () => {
   const scrollToTop = () => {
@@ -27,7 +27,6 @@ export const Header = () => {
             alt="logo"
             width={logo.width}
             height={logo.height}
-            className={"xl:-translate-x-18 sm:-translate-x-10 sm:scale-[1.2]"}
           />
         </Link>
         <nav className={"lg:block hidden justify-self-center"}>

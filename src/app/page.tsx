@@ -13,9 +13,9 @@ export default function Home() {
       <HeroSection />
       <SeasonEvents />
       <Events />
-      <Pilots />
       <Trains />
       <TrackDays />
+      <Pilots />
       <MediaSection />
       <Partners />
     </>

@@ -99,7 +99,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
             <div
               key={event.id}
               className={cn(
-                "relative group overflow-hidden",
+                "relative group overflow-hidden aspect-650/800",
                 index % 2 !== 0 && "lg:translate-y-16",
               )}
             >
@@ -108,9 +108,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 alt="poster"
                 width={405}
                 height={514}
-                className={
-                  "w-full lg:h-128.5 md:h-110 sm:h-96 h-64 rounded-2xl object-cover"
-                }
+                className={"w-full rounded-2xl object-cover h-full"}
               />
               <div
                 className={

@@ -1,15 +1,15 @@
-import { Button } from "components/ui/Button";
+import { PilotsButton } from "components/pilots-home-page/PilotsButton";
 import Image from "next/image";
-import graffitiArrow from "../../public/graffiti-arrow.svg";
-import graffitiComposition from "../../public/graffiti-composition.png";
-import pilots from "../../public/pilots.png";
-import pilotsGraffiti from "../../public/pilots-graffiti.svg";
-import pilotsGraffitiRx from "../../public/pilots-graffiti-rx.svg";
-import pilotsSectionUnderline from "../../public/pilots-section-underline.svg";
-import pilotsUnderline from "../../public/pilots-underline.svg";
-import pilotsX from "../../public/pilots-x.svg";
+import graffitiArrow from "../../../public/graffiti-arrow.svg";
+import graffitiComposition from "../../../public/graffiti-composition.png";
+import pilots from "../../../public/pilots.png";
+import pilotsGraffiti from "../../../public/pilots-graffiti.svg";
+import pilotsGraffitiRx from "../../../public/pilots-graffiti-rx.svg";
+import pilotsSectionUnderline from "../../../public/pilots-section-underline.svg";
+import pilotsUnderline from "../../../public/pilots-underline.svg";
+import pilotsX from "../../../public/pilots-x.svg";
 
-export const Pilots = () => {
+export const PilotsHomePage = () => {
   return (
     <section
       className="min-h-125 flex items-center scroll-mt-36"
@@ -49,7 +49,7 @@ export const Pilots = () => {
               на список всех пилотов
             </span>
           </div>
-          <Button href="/pilots">Пилоты</Button>
+          <PilotsButton />
           <Image
             src={pilotsUnderline}
             alt="decorative graffiti"

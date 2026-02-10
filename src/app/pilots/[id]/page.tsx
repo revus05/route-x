@@ -1,4 +1,4 @@
-import { PilotPage } from "components/PilotPage";
+import { PilotPage } from "components/pilots/PilotPage";
 import { notFound } from "next/navigation";
 import type { Car } from "types/car";
 import type { Pilot } from "types/pilot";

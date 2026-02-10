@@ -1,4 +1,4 @@
-import { PilotsPage } from "components/PilotsPage";
+import { PilotsPage } from "components/pilots/PilotsPage";
 import type { Pilot } from "types/pilot";
 
 export default async function Pilots() {

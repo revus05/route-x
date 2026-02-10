@@ -18,7 +18,7 @@ export const HeroSection = () => {
             </h1>
           </div>
           <span className={"text-shadow-black text-shadow-md"}>
-            Автоспортивные соревнования, где решают точность, реакция и контроль
+            Автоспорт, где решает мастерство управления и мгновенная реакция.
           </span>
         </div>
         <RegisterButton />

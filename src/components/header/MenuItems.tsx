@@ -53,13 +53,11 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
       </li>
       <li>
         <Link
-          href="/#pilots_section"
+          href="/pilots"
           className={
             "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
           }
-          onClick={(e) => {
-            e.preventDefault();
-            scrollTo("pilots_section");
+          onClick={() => {
             if (onMenuItemClickAction) {
               onMenuItemClickAction();
             }
@@ -102,16 +100,6 @@ export const MenuItems: FC<MenuItemsProps> = ({ onMenuItemClickAction }) => {
           Партнеры
         </Link>
       </li>
-      {/*<li>
-        <Link
-          href="#"
-          className={
-            "flex xl:px-6 lg:px-2 px-6 py-3 2xl:text-xl xl:text-lg lg:text-base text-lg font-semibold hover:text-accent"
-          }
-        >
-          Результаты
-        </Link>
-      </li>*/}
       <li>
         <Link
           href="/documents"

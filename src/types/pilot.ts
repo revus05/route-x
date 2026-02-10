@@ -8,4 +8,5 @@ export type Pilot = {
   image: string;
   cars: string;
   awards: string;
+  raceNumber: string;
 };

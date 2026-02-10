@@ -35,9 +35,19 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
           height={800}
           className={"w-full h-auto rounded-3xl"}
         />
-        <h1 className={"text-[32px] font-semibold"}>
-          {pilot.firstName} {pilot.lastName}
-        </h1>
+        <div className={"flex gap-4 items-center"}>
+          <h2
+            className={
+              "font-semibold text-[32px] text-accent whitespace-nowrap"
+            }
+          >
+            {pilot.raceNumber}
+          </h2>
+          <div className={"h-16 w-px bg-white/70 rotate-15"} />
+          <h1 className={"text-3xl truncate font-semibold whitespace-nowrap "}>
+            {pilot.firstName} {pilot.lastName}
+          </h1>
+        </div>
         <div className={"grid grid-cols-2 gap-y-1"}>
           <span className={"text-white/70"}>Возраст</span>
           <span>{pilot.age}</span>
@@ -91,13 +101,7 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
               height={1200 / 1.5}
               className={"rounded-3xl"}
             />
-            <div className={"flex gap-4 items-center"}>
-              <h2 className={"font-semibold text-[32px] text-accent"}>
-                {car.raceNumber}
-              </h2>
-              <div className={"h-16 w-px bg-white/70 rotate-15"} />
-              <h2 className={"font-semibold text-[32px]"}>{car.title}</h2>
-            </div>
+            <h2 className={"font-semibold text-[32px]"}>{car.title}</h2>
             <div
               className={
                 "grid md:grid-cols-2 grid-cols-[1fr_auto] max-w-lg gap-y-1"

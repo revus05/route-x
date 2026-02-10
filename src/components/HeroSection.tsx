@@ -13,7 +13,7 @@ export const HeroSection = () => {
       <div className={"flex flex-col gap-6 md:w-161.25 w-full"}>
         <div className={"flex flex-col gap-2 2xl:px-0 px-5"}>
           <div className={"w-fit h-fit"}>
-            <h1 className={"xl:text-[40px] text-[32px] font-bold"}>
+            <h1 className={"xl:text-[40px] text-[20px] font-bold"}>
               Точность. Скорость. Контроль.
             </h1>
           </div>

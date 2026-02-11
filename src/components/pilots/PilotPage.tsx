@@ -24,18 +24,18 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
   return (
     <div
       className={
-        "2xl:w-7xl 2xl:px-0 px-2 w-full mx-auto flex md:flex-row flex-col gap-8"
+        "2xl:w-7xl 2xl:px-0 px-2 w-full mx-auto grid md:grid-cols-[1fr_2fr] grid-cols-1 gap-8"
       }
     >
-      <div className={"flex flex-col gap-4 md:w-162.25 w-full"}>
+      <div className={"flex flex-col gap-4 min-w-0"}>
         <Image
           src={pilot.image}
           alt={`${pilot.firstName} ${pilot.lastName}`}
           width={650}
           height={800}
-          className={"w-full h-auto rounded-3xl"}
+          className={"h-120 w-fit rounded-3xl w-full object-cover"}
         />
-        <div className={"flex gap-4 items-center"}>
+        <div className={"flex gap-4 items-center w-full"}>
           <h2
             className={
               "font-semibold text-[32px] text-accent whitespace-nowrap"
@@ -43,8 +43,8 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
           >
             {pilot.raceNumber}
           </h2>
-          <div className={"h-16 w-px bg-white/70 rotate-15"} />
-          <h1 className={"text-3xl truncate font-semibold whitespace-nowrap "}>
+          <div className={"h-16 w-px bg-white/70 rotate-15 shrink-0"} />
+          <h1 className={"text-3xl truncate font-semibold min-w-0"}>
             {pilot.firstName} {pilot.lastName}
           </h1>
         </div>
@@ -99,7 +99,7 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
               alt={car.title}
               width={1200}
               height={1200 / 1.5}
-              className={"rounded-3xl"}
+              className={"rounded-3xl h-120 object-cover"}
             />
             <h2 className={"font-semibold text-[32px]"}>{car.title}</h2>
             <div

@@ -99,7 +99,7 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
               alt={car.title}
               width={1200}
               height={1200 / 1.5}
-              className={"rounded-3xl h-120 object-cover"}
+              className={"rounded-3xl md:h-120 object-cover"}
             />
             <h2 className={"font-semibold text-[32px]"}>{car.title}</h2>
             <div

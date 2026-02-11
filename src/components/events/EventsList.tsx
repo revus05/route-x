@@ -99,7 +99,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
             <div
               key={event.id}
               className={cn(
-                "relative group overflow-hidden aspect-650/800",
+                "relative group lg:overflow-hidden aspect-650/800",
                 index % 2 !== 0 && "lg:translate-y-16",
               )}
             >

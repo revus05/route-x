@@ -38,7 +38,7 @@ export const SeasonEvents = async () => {
         />
         <div
           className={
-            "2xl:w-7xl w-full mx-auto bg-black/50 backdrop-blur-lg md:px-8 md:py-6 px-4 py-3 flex-col flex gap-8 rounded-2xl relative overflow-hidden"
+            "2xl:w-7xl w-full mx-auto bg-black/50 backdrop-blur-lg md:px-8 md:py-6 sm:px-4 px-2 py-3 flex-col flex gap-8 rounded-2xl relative overflow-hidden"
           }
         >
           <h2 className={"font-semibold text-2xl text-center"}>
@@ -56,31 +56,39 @@ export const SeasonEvents = async () => {
                 >
                   <td
                     className={
-                      "lg:text-xl text-base pr-1 font-semibold py-1.5 uppercase truncate md:pr-2"
+                      "lg:text-xl md:text-base sm:text-sm text-[11px] md:pr-1 px-1 font-semibold py-1.5 uppercase md:pr-2"
                     }
                   >
-                    {seasonEvent.date || "—"}
+                    <div className={"line-clamp-3"}>
+                      {seasonEvent.date || "—"}
+                    </div>
                   </td>
                   <td
                     className={
-                      "lg:text-xl text-base px-1 font-semibold py-1.5 uppercase truncate md:px-2"
+                      "lg:text-xl md:text-base sm:text-sm text-[11px] px-1 font-semibold py-1.5 uppercase md:px-2"
                     }
                   >
-                    {seasonEvent.format || "—"}
+                    <div className={"line-clamp-3"}>
+                      {seasonEvent.format || "—"}
+                    </div>
                   </td>
                   <td
                     className={
-                      "lg:text-xl text-base px-1 font-semibold py-1.5 uppercase truncate md:px-2"
+                      "lg:text-xl md:text-base sm:text-sm text-[11px] px-1 font-semibold py-1.5 uppercase md:px-2"
                     }
                   >
-                    {seasonEvent.configuration || "—"}
+                    <div className={"line-clamp-3"}>
+                      {seasonEvent.configuration || "—"}
+                    </div>
                   </td>
                   <td
                     className={
-                      "lg:text-xl text-base pl-1 font-semibold py-1.5 uppercase truncate md:pl-2"
+                      "lg:text-xl md:text-base sm:text-sm text-[11px] pl-1 font-semibold py-1.5 uppercase md:pl-2"
                     }
                   >
-                    {seasonEvent.location || "—"}
+                    <div className={"line-clamp-3"}>
+                      {seasonEvent.location || "—"}
+                    </div>
                   </td>
                 </tr>
               ))}

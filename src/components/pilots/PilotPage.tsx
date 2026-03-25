@@ -94,7 +94,7 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
             width="100%"
             src={`https://drive.google.com/file/d/${pilot.video}/preview`}
             allow="autoplay"
-            className="aspect-video"
+            className="aspect-video rounded-3xl"
             allowFullScreen>
         </iframe>
 

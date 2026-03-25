@@ -9,6 +9,11 @@ const nextConfig: NextConfig = {
         hostname: "i.postimg.cc",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "drive.google.com",
+        pathname: "/**",
+      },
     ],
   },
 };

@@ -90,46 +90,55 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
         </div>
       </div>
       <div className={"flex flex-col gap-8 grow"}>
+        <iframe
+            id="my-video"
+            width="100%"
+            height="500"
+            src={`https://drive.google.com/file/d/${pilot.video}/preview`}
+            allow="autoplay"
+            allowFullScreen>
+        </iframe>
+
         {cars.length === 0 && (
-          <span className={"text-center"}>У этого пилота нет авто</span>
+            <span className={"text-center"}>У этого пилота нет авто</span>
         )}
         {cars.map((car) => (
-          <div key={car.id} className={"flex flex-col gap-2"}>
-            <Image
-              src={car.image}
-              alt={car.title}
-              width={1200}
-              height={1200 / 1.5}
-              className={"rounded-3xl md:h-120 object-cover"}
-            />
-            <h2 className={"font-semibold text-[32px]"}>{car.title}</h2>
-            <div
-              className={
-                "grid md:grid-cols-2 grid-cols-[1fr_auto] max-w-lg gap-y-1"
-              }
-            >
-              <span className={"text-white/70"}>Привод</span>
-              <span className={"md:justify-self-start justify-self-end"}>
+            <div key={car.id} className={"flex flex-col gap-2"}>
+              <Image
+                  src={car.image}
+                  alt={car.title}
+                  width={1200}
+                  height={1200 / 1.5}
+                  className={"rounded-3xl md:h-120 object-cover"}
+              />
+              <h2 className={"font-semibold text-[32px]"}>{car.title}</h2>
+              <div
+                  className={
+                    "grid md:grid-cols-2 grid-cols-[1fr_auto] max-w-lg gap-y-1"
+                  }
+              >
+                <span className={"text-white/70"}>Привод</span>
+                <span className={"md:justify-self-start justify-self-end"}>
                 {car.drive}
               </span>
-              <span className={"text-white/70"}>Рабочий объем (л)</span>
-              <span className={"md:justify-self-start justify-self-end"}>
+                <span className={"text-white/70"}>Рабочий объем (л)</span>
+                <span className={"md:justify-self-start justify-self-end"}>
                 {car.engineDisplacement}
               </span>
-              <span className={"text-white/70"}>Крутящий момент</span>
-              <span className={"md:justify-self-start justify-self-end"}>
+                <span className={"text-white/70"}>Крутящий момент</span>
+                <span className={"md:justify-self-start justify-self-end"}>
                 {car.torque}
               </span>
-              <span className={"text-white/70"}>Мощность</span>
-              <span className={"md:justify-self-start justify-self-end"}>
+                <span className={"text-white/70"}>Мощность</span>
+                <span className={"md:justify-self-start justify-self-end"}>
                 {car.power}
               </span>
-              <span className={"text-white/70"}>Вес (пустой)</span>
-              <span className={"md:justify-self-start justify-self-end"}>
+                <span className={"text-white/70"}>Вес (пустой)</span>
+                <span className={"md:justify-self-start justify-self-end"}>
                 {car.weight}
               </span>
+              </div>
             </div>
-          </div>
         ))}
       </div>
     </div>

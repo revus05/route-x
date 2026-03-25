@@ -89,14 +89,15 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
         </div>
       </div>
       <div className={"flex flex-col gap-8 grow"}>
-        <iframe
+        {pilot.video && <iframe
             id="my-video"
             width="100%"
             src={`https://drive.google.com/file/d/${pilot.video}/preview`}
             allow="autoplay"
             className="aspect-video rounded-3xl"
             allowFullScreen>
-        </iframe>
+        </iframe>}
+
 
         {cars.length === 0 && (
             <span className={"text-center"}>У этого пилота нет авто</span>

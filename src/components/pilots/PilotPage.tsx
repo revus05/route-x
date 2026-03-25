@@ -35,7 +35,6 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
           height={800}
           className={"h-120 rounded-3xl w-full object-cover"}
         />
-        <video src={pilot.video} className="rounded-3xl max-w-md mx-auto w-full" autoPlay muted controls>Ваш браузер не поддерживает видео</video>
         <div className={"flex gap-4 items-center w-full"}>
           <h2
             className={

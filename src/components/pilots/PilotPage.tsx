@@ -35,6 +35,16 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
           height={800}
           className={"h-120 rounded-3xl w-full object-cover"}
         />
+        {pilot.video && <iframe
+            title="video"
+            id="my-video"
+            width="100%"
+            height="500"
+            src={`https://drive.google.com/file/d/${pilot.video}/preview`}
+            allow="autoplay"
+            className="rounded-3xl"
+            allowFullScreen>
+        </iframe>}
         <div className={"flex gap-4 items-center w-full"}>
           <h2
             className={
@@ -89,16 +99,6 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
         </div>
       </div>
       <div className={"flex flex-col gap-8 grow"}>
-        {pilot.video && <iframe
-            id="my-video"
-            width="100%"
-            src={`https://drive.google.com/file/d/${pilot.video}/preview`}
-            allow="autoplay"
-            className="aspect-video rounded-3xl"
-            allowFullScreen>
-        </iframe>}
-
-
         {cars.length === 0 && (
             <span className={"text-center"}>У этого пилота нет авто</span>
         )}

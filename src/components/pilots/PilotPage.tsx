@@ -35,16 +35,6 @@ export const PilotPage: FC<PilotPageProps> = ({ pilot, cars }) => {
           height={800}
           className={"h-120 rounded-3xl w-full object-cover"}
         />
-        {pilot.video && <iframe
-            title="video"
-            id="my-video"
-            width="100%"
-            height="500"
-            src={`https://drive.google.com/file/d/${pilot.video}/preview`}
-            allow="autoplay"
-            className="rounded-3xl"
-            allowFullScreen>
-        </iframe>}
         <div className={"flex gap-4 items-center w-full"}>
           <h2
             className={

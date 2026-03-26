@@ -13,8 +13,8 @@ export default function Home() {
       <HeroSection />
       <SeasonEvents />
       <Events />
-      <Trains />
       <TrackDays />
+      <Trains />
       <PilotsHomePage />
       <MediaSection />
       <Partners />

@@ -24,6 +24,7 @@ export const Trains = () => {
           "lg:w-fit w-full lg:px-0 px-2 mx-auto flex xl:gap-16 gap-12 flex-col relative"
         }
       >
+        <div className={"h-px w-full bg-accent "} />
         <div className={"flex flex-col gap-6 relative"}>
           <Image
             src={trainsRacetrack}
@@ -43,7 +44,6 @@ export const Trains = () => {
             Ваш браузер не поддерживает видео
           </video>
         </div>
-        <div className={"h-px w-full bg-accent "} />
       </div>
     </section>
   );

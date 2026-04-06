@@ -1,6 +1,8 @@
 import { cn } from "lib/cn";
 import Image from "next/image";
+import chequeredFlag from "../../public/chequered-flag.png";
 import oval from "../../public/oval.svg";
+import trophy from "../../public/trophy.png";
 
 type SeasonEvent = {
   id: string;
@@ -56,7 +58,7 @@ export const SeasonEvents = async () => {
                 >
                   <td
                     className={
-                      "lg:text-xl md:text-base sm:text-sm text-[11px] md:pr-1 px-1 font-semibold py-1.5 uppercase md:pr-2"
+                      "lg:text-xl md:text-base sm:text-sm text-[11px] md:pr-1 px-1 font-semibold py-1.5 uppercase"
                     }
                   >
                     <div className={"line-clamp-3"}>
@@ -68,8 +70,14 @@ export const SeasonEvents = async () => {
                       "lg:text-xl md:text-base sm:text-sm text-[11px] px-1 font-semibold py-1.5 uppercase md:px-2"
                     }
                   >
-                    <div className={"line-clamp-3"}>
-                      {seasonEvent.format || "—"}
+                    <div className={"line-clamp-3 flex gap-2"}>
+                      {seasonEvent.format.startsWith("🏆") && (
+                          <Image src={trophy.src} width={24} height={24} alt="trophy" className="h-fit shrink-0 md:size-6 sm:size-5 size-4" />
+                      )}
+                      {seasonEvent.format.startsWith("🏁") && (
+                          <Image src={chequeredFlag.src} width="24" height="24" alt="chequeredFlag" className="h-fit shrink-0 md:size-6 sm:size-5 size-4" />
+                      )}
+                      {[...(seasonEvent.format || "")].slice(1).join("") || "—"}
                     </div>
                   </td>
                   <td

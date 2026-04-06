@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         hostname: "drive.google.com",
         pathname: "/**",
       },
+      {
+        protocol: "https",
+        hostname: "lh*.googleusercontent.com",
+        pathname: "/**",
+      },
     ],
   },
 };

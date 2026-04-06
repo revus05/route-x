@@ -109,6 +109,7 @@ export const EventsList: FC<EventsListProps> = ({ events }) => {
                 width={405}
                 height={514}
                 className={"w-full rounded-2xl object-cover h-full"}
+                loading="lazy"
               />
               <div
                 className={
